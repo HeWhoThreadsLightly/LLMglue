@@ -1,0 +1,9 @@
+[submodule "MemGPT"]
+	path = MemGPT
+	url = https://github.com/HeWhoThreadsLightly/MemGPT.git
+[submodule "ChatDev"]
+	path = ChatDev
+	url = https://github.com/HeWhoThreadsLightly/ChatDev.git
+[submodule "tree-of-thought-llm"]
+	path = tree-of-thought-llm
+	url = https://github.com/HeWhoThreadsLightly/tree-of-thought-llm.git
