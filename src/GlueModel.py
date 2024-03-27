@@ -1,6 +1,5 @@
+from __future__ import annotations
 from abc import ABC
-from GlueLadder import GlueLadder
-from GlueModule import GlueModule
 
 # base wrapper class for calling the next model in the stack
 # made to be handed out to module logic code as a substitute to openai.ChatCompletion.create(**kwargs)
@@ -13,4 +12,7 @@ class GlueModel(ABC):
 
     def prompt(self, **kwargs):
         return self.module.getNext().prompt(**kwargs)
+
+    def message(self, message):
+        return self.module.getNext().message(message)
 

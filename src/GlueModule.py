@@ -1,7 +1,7 @@
+from __future__ import annotations
 from abc import ABC
 
-from src.GlueLadder import GlueLadder
-from src.GlueModel import GlueModel
+from GlueModel import GlueModel
 
 
 class GlueModule(ABC):
@@ -12,6 +12,9 @@ class GlueModule(ABC):
     def prompt(self, **kwargs):
         raise NotImplemented
 
+    def message(self, message):
+        raise NotImplemented
+
     def getGlueModel(self):
         return GlueModel(self)
 
@@ -20,4 +23,3 @@ class GlueModule(ABC):
 
     def start(self):
         pass
-

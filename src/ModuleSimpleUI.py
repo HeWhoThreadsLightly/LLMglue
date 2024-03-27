@@ -14,7 +14,7 @@ class ModuleSimpleUI(GlueModule):
         try:
             while True:                     # loop until keyboard interrupt
                 s = input()                 # get user input
-                r = self.model.prompt(s)    # send input to next module
+                r = self.model.message(s)    # send input to next module
                 print(r)                    # print the model response
         except KeyboardInterrupt:
             print('interrupted!')
