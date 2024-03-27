@@ -1,9 +1,15 @@
 [submodule "MemGPT"]
 	path = MemGPT
 	url = https://github.com/HeWhoThreadsLightly/MemGPT.git
+	branch = main
+	update = merge
 [submodule "ChatDev"]
 	path = ChatDev
 	url = https://github.com/HeWhoThreadsLightly/ChatDev.git
+	branch = main
+	update = merge
 [submodule "tree-of-thought-llm"]
 	path = tree-of-thought-llm
 	url = https://github.com/HeWhoThreadsLightly/tree-of-thought-llm.git
+	branch = master
+	update = merge
