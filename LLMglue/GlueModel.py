@@ -16,3 +16,6 @@ class GlueModel(ABC):
     def message(self, message):
         return self.module.getNext().message(message)
 
+    def token_limit(self):
+        return self.module.getNext().token_limit()
+

@@ -5,8 +5,8 @@ import backoff
 
 from openai import OpenAI
 
-from src.GlueLadder import GlueLadder
-from src.GlueLadder import GlueModule
+from LLMglue.GlueLadder import GlueLadder
+from LLMglue.GlueLadder import GlueModule
 
 api_key = os.getenv("OPENAI_API_KEY", "")
 if api_key != "":
@@ -27,6 +27,7 @@ class ModuleOpenAI(GlueModule):
         self.prompt_tokens = 0
 
         self.client = OpenAI(api_key=api_key)
+        self.model = "gpt-4"
 
     @backoff.on_exception(backoff.expo, openai.OpenAIError)
     def completions_with_backoff(self, **kwargs):
@@ -42,6 +43,18 @@ class ModuleOpenAI(GlueModule):
 
     def message(self, message):
         return self.gpt(message)
+
+    def token_limit(self):
+        if self.model == "GPT_3_5_TURBO":
+            return 16384
+        elif self.model == "GPT_3_5_TURBO_NEW":
+            return 16384
+        elif self.model == "GPT_4":
+            return 8192
+        elif self.model == "GPT_4_32k":
+            return 32768
+        elif self.model == "GPT_4_TURBO":
+            return 128000
 
     def gpt(self, prompt, model="gpt-4", temperature=0.7, max_tokens=1000, n=1, stop=None) -> list:
         messages = [{"role": "user", "content": prompt}]

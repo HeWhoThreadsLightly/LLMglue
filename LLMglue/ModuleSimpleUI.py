@@ -1,5 +1,5 @@
-from src.GlueLadder import GlueLadder
-from src.GlueModule import GlueModule
+from LLMglue.GlueLadder import GlueLadder
+from LLMglue.GlueModule import GlueModule
 
 
 class ModuleSimpleUI(GlueModule):

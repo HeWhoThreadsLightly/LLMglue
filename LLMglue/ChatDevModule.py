@@ -19,10 +19,11 @@ class ModuleChatDev(GlueModule):
         self.config_role_path = None
         ChatDevGlueModelGlobal.set(self.getGlueModel())
 
-        self.root = os.path.dirname(__file__)
-
-        config_dir = os.path.join(self.root, "CompanyConfig", self.company)
-        default_config_dir = os.path.join(self.root, "CompanyConfig", "Default")
+        root = os.path.dirname(os.path.dirname(__file__))
+        self.chatDevRoot = os.path.join(root, "ChatDev")
+        sys.path.append(self.chatDevRoot)
+        config_dir = os.path.join(self.chatDevRoot, "CompanyConfig", self.company)
+        default_config_dir = os.path.join(self.chatDevRoot, "CompanyConfig", "Default")
 
         config_files = [
             "ChatChainConfig.json",
@@ -44,7 +45,7 @@ class ModuleChatDev(GlueModule):
         self.config_path, self.config_phase_path, self.config_role_path = tuple(config_paths)
 
     def prompt(self, project_name, task_prompt, org_name="DefaultOrganization"):
-        sys.path.append(self.root)
+
         chat_chain = ChatChain(config_path=self.config_path,
                                config_phase_path=self.config_phase_path,
                                config_role_path=self.config_role_path,

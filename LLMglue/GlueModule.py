@@ -15,11 +15,16 @@ class GlueModule(ABC):
     def message(self, message):
         raise NotImplemented
 
+
     def getGlueModel(self):
         return GlueModel(self)
 
     def getNext(self):
         return self.ladder.getModule(self.index + 1)
+
+
+    def token_limit(self):
+        return self.getNext().token_limit()
 
     def start(self):
         pass
