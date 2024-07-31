@@ -13,8 +13,8 @@ class GlueModel(ABC):
     def prompt(self, **kwargs):
         return self.module.getNext().prompt(**kwargs)
 
-    def message(self, message):
-        return self.module.getNext().message(message)
+    def message(self, history):
+        return self.module.getNext().message(history)
 
     def token_limit(self):
         return self.module.getNext().token_limit()

@@ -1,6 +1,7 @@
 from __future__ import annotations
 from abc import ABC
 
+from ChatHistory import ChatHistory
 from GlueModel import GlueModel
 
 
@@ -12,7 +13,7 @@ class GlueModule(ABC):
     def prompt(self, **kwargs):
         raise NotImplemented
 
-    def message(self, message):
+    def message(self, history: ChatHistory):
         raise NotImplemented
 
 

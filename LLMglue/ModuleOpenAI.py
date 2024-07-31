@@ -21,13 +21,16 @@ if api_base != "":
 
 
 class ModuleOpenAI(GlueModule):
-    def __init__(self, ladder: GlueLadder, index: int):
+    def __init__(self, ladder: GlueLadder, index: int, model="gpt-4", temperature=0.7, max_tokens=1000, n=1):
         super().__init__(ladder, index)
         self.completion_tokens = 0
         self.prompt_tokens = 0
 
         self.client = OpenAI(api_key=api_key)
-        self.model = "gpt-4"
+        self.model = model
+        self.temperature = temperature
+        self.max_tokens = max_tokens
+        self.n = n
 
     @backoff.on_exception(backoff.expo, openai.OpenAIError)
     def completions_with_backoff(self, **kwargs):
@@ -41,8 +44,11 @@ class ModuleOpenAI(GlueModule):
         # todo log prompt token usage
         return result
 
-    def message(self, message):
-        return self.gpt(message)
+    def message(self, history):
+        res = self.gpt_l(history.messages)
+        for m in res:
+            history.add_message(m, "assistant")
+        return res
 
     def token_limit(self):
         if self.model == "GPT_3_5_TURBO":
@@ -56,11 +62,15 @@ class ModuleOpenAI(GlueModule):
         elif self.model == "GPT_4_TURBO":
             return 128000
 
-    def gpt(self, prompt, model="gpt-4", temperature=0.7, max_tokens=1000, n=1, stop=None) -> list:
+    def gpt(self, prompt, stop=None) -> list:
         messages = [{"role": "user", "content": prompt}]
-        return self.chatgpt(messages, model=model, temperature=temperature, max_tokens=max_tokens, n=n, stop=stop)
+        return self.chatgpt(messages, model=self.model, temperature=self.temperature, max_tokens=self.max_tokens, n=self.n, stop=stop)
+
+    def gpt_l(self, messages, stop=None) -> list:
+        return self.chatgpt(messages, model=self.model, temperature=self.temperature, max_tokens=self.max_tokens, n=self.n, stop=stop)
 
     def chatgpt(self, messages, model="gpt-4", temperature=0.7, max_tokens=1000, n=1, stop=None) -> list:
+        res = None
         outputs = []
         while n > 0:
             cnt = min(n, 20)
