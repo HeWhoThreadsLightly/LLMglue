@@ -83,6 +83,28 @@ class Info:
         self.start_time = -1
         self.end_time = -1
 
+    def to_dict(self):
+        return {
+            "model_type": self.model_type,
+            "str": self.str,
+            "cost": self.cost,
+            "version_updates": self.version_updates,
+            "num_code_files": self.num_code_files,
+            "num_png_files": self.num_png_files,
+            "num_doc_files": self.num_doc_files,
+            "code_lines": self.code_lines,
+            "env_lines": self.env_lines,
+            "manual_lines": self.manual_lines,
+            "duration": self.duration,
+            "num_utterance": self.num_utterance,
+            "num_reflection": self.num_reflection,
+            "num_prompt_tokens": self.num_prompt_tokens,
+            "num_completion_tokens": self.num_completion_tokens,
+            "num_total_tokens": self.num_total_tokens
+            #"start_time": self.start_time,
+            #"end_time": self.end_time,
+        }
+
 def get_info(dir, log_filepath):
     print("dir:", dir)
     info = Info()
@@ -218,8 +240,11 @@ def get_info(dir, log_filepath):
 
 
     # Calculate the duration
-    info.duration = info.end_time - info.start_time
-    info.duration = info.duration.total_seconds()
+    if info.end_time != -1 and  info.start_time != -1:
+        info.duration = info.end_time - info.start_time
+        info.duration = info.duration.total_seconds()
+    else:
+        info.duration = -1
     print(info.duration)
     # print("duration:", info.duration)
 
