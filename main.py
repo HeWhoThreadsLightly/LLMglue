@@ -108,7 +108,7 @@ class CodeGeneratorUI:
 
                 previous_version_dir = progress.get("previous_version_dir", "")
 
-                for i in range(progress["current_req"], len(requirements)):
+                for i in range(progress["current_req"], len(requirements) + 1):
                     if not self.running:
                         return
 
