@@ -1,0 +1,24 @@
+{
+    "current_req": 2,
+    "previous_version_dir": "/home/chatdev/git/LLMglue/ChatDev/WareHouse/FOCM_DefaultOrganization_20240801231728",
+    "info": {
+        "req1": {
+            "model_type": "gpt-3.5-turbo",
+            "str": "\n\n\ud83d\udcb0**cost**=$0.023251\n\n\ud83d\udd28**version_updates**=5.0\n\n\ud83d\udcc3**num_code_files**=2\n\n\ud83c\udfde**num_png_files**=0\n\n\ud83d\udcda**num_doc_files**=8\n\n\ud83d\udcc3**code_lines**=37\n\n\ud83d\udccb**env_lines**=2\n\n\ud83d\udcd2**manual_lines**=38\n\n\ud83d\udde3**num_utterances**=24\n\n\ud83e\udd14**num_self_reflections**=1\n\n\u2753**num_prompt_tokens**=11335\n\n\u2757**num_completion_tokens**=3124\n\n\ud83c\udf1f**num_total_tokens**=14459\n\n\ud83d\udd51**duration**=50.0s",
+            "cost": 0.0232505,
+            "version_updates": 5.0,
+            "num_code_files": 2,
+            "num_png_files": 0,
+            "num_doc_files": 8,
+            "code_lines": 37,
+            "env_lines": 2,
+            "manual_lines": 38,
+            "duration": 50.0,
+            "num_utterance": 24,
+            "num_reflection": 1,
+            "num_prompt_tokens": 11335,
+            "num_completion_tokens": 3124,
+            "num_total_tokens": 14459
+        }
+    }
+}

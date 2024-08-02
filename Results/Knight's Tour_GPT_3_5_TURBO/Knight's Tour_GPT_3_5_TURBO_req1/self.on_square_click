@@ -1,0 +1,2 @@
+This code binds the `on_square_click` method to the left mouse button click event on the squares with the tag "square". You will need to implement the `on_square_click` method to call the `move_knight` method with the corresponding row and column of the clicked square.
+Once you have made these changes, the player will be able to move the knight by clicking on the chessboard squares."

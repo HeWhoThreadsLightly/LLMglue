@@ -1,0 +1,76 @@
+Task:
+Develop a desktop puzzle game based on the mathematical problem known as the "Knight's Tour". In this game, the player controls a chess knight, and the objective is to move the knight across a chessboard (or any m x n grid) so that it visits every square exactly once. The challenge increases with the size of the board, and the game can offer various levels of difficulty. The knight moves in an L-shape, as it does in traditional chess
+REQ1 User interface: Main menu: Start Game: Begins a new game. Players can select the difficulty level or board size here.
+REQ2 User interface: Main menu: Options/Settings: Allows players to customize game settings, including sound volume, visual themes, and knight/chessboard appearances.
+REQ3 User interface: Main menu: Tutorial: A brief interactive or video tutorial on how the game is played, detailing the knight's legal moves.
+REQ4 User interface: Main menu: High Scores: Displays a list of high scores, possibly with filters for different board sizes.
+REQ5 User interface: Main menu: Exit: Quits the game.
+REQ6 User interface: Game window: Chessboard/Grid Display: Centrally displays the game board with a clear distinction between visited and unvisited squares. The current position of the knight is highlighted.
+REQ7 User interface: Game window: Move Counter: Shows the number of moves made by the player.
+REQ8 User interface: Game window: Timer: (Optional) A timer showing how long the player has been attempting the current puzzle.
+REQ9 User interface: Game window: Undo Button: Allows the player to undo the last move. This could be limited to a certain number of uses.
+REQ10 User interface: Game window: Hint Button: Provides a hint for the next move. This could be limited to ensure the game remains challenging.
+REQ11 User interface: Game window: Pause/Menu Button: Pauses the game and opens a menu for accessing settings, returning to the main menu, or restarting the game.
+REQ12 User Interface: Options/Settings Window: Visual Settings: Options to change the theme of the chessboard and the knight. This could include color schemes or graphical styles.
+REQ13 User Interface: Options/Settings Window: Difficulty Settings: Allows users to choose the size of the chessboard, affecting the difficulty. The window might also offer toggles for advanced features like the timer.
+REQ14 User interface: High scores window: Score List: Displays a list of high scores, with details such as player name, score (based on moves and time), and board size.
+REQ15 User interface: High scores window: Filters: Allows users to filter scores by board size or difficulty level.
+REQ16 User interface: Tutorial window: Interactive Tutorial: A step-by-step guide that introduces the player to the game mechanics, including how the knight moves, the objective of the game, and any unique features (e.g., hints, undos).
+REQ17 User Interface: Pause Menu (In-Game): Resume Game: Returns to the game.
+REQ18 User Interface: Pause Menu (In-Game): Restart Game: Starts a new game with the same settings.
+REQ19 User Interface: Pause Menu (In-Game): Settings: Opens the Options/Settings window.
+REQ20 User Interface: Pause Menu (In-Game): Main Menu: Returns to the main menu (with a warning about losing current game progress).
+REQ21 Additional feature requirements: Game mechanics: Implement the knight's legal moves based on chess rules.
+REQ22 Additional feature requirements: Game mechanics: Prevent the knight from visiting a square more than once.
+REQ23 Additional feature requirements: Game mechanics: Detect when the player has successfully completed the tour or if the tour is no longer possible to complete.
+REQ24 Additional feature requirements: Levels and challenges: Offer boards of different sizes (e.g., 8x8, 6x6, 10x10) to cater to various levels of difficulty.
+REQ25 Additional feature requirements: Levels and challenges: Include a timer and move counter to challenge players to complete the puzzle faster or in fewer moves.
+REQ26 Additional feature requirements: Scoring and progression: Implement a scoring system based on the time taken to complete the tour, and the difficulty level of the board.
+REQ27 Additional feature requirements: Scoring and progression: Save high scores and player progress.
+REQ28 Additional feature requirements: Tutorials and hints: Provide a brief interactive tutorial on how to play the game and move the knight.
+REQ29 Additional feature requirements: Tutorials and hints: Offer hints or allow users to undo moves to help beginners.
+REQ30 Additional feature requirements: Customization and preferences: Allow players to customize the appearance of the chessboard and the knight.
+REQ31 Additional feature requirements: Customization and preferences: Options to mute sounds or music.
+REQ32 Accessibility requirements: Keyboard navigation: Full functionality should be accessible via keyboard shortcuts to ensure that users who cannot use a mouse can navigate efficiently through the application.
+REQ33 Accessibility requirements: Keyboard navigation: Implement tab navigation through all interactive elements in a logical order.
+REQ34 Accessibility requirements: Keyboard navigation: Provide visual indicators for the currently focused element.
+REQ35 Accessibility requirements: Screen reader support: make use of alt text to describe images, icons, and other non-textual elements.
+REQ36 Accessibility requirements: Screen reader support: Use labels and roles for complex elements (like drag-and-drop interfaces or custom controls) to ensure their purpose and state are conveyed to screen reader users.
+REQ37 Accessibility requirements: High contrast mode: Support for high contrast themes that make text, icons, and other elements more distinguishable for users with low vision.
+REQ38 Accessibility requirements: High contrast mode: Ensure that all text is readable and all interactive elements are visible against background colors.
+REQ39 Accessibility requirements: Text size and font adjustments: Allow users to adjust text size without breaking the layout or losing functionality.
+REQ40 Accessibility requirements: Text size and font adjustments: Support the use of user-defined system fonts, including those designed for dyslexia.
+REQ41 Accessibility requirements: Color blind mode: Implement color schemes that are accessible to users with various types of color blindness (e.g., deuteranopia, protanopia, tritanopia).
+REQ42 Accessibility requirements: Color blind mode: Ensure that information conveyed with color is also distinguishable through patterns or shapes.
+REQ43 Accessibility requirements: Magnification and zoom: Ensure the application's interface and content can be magnified or zoomed in up to 200% without loss of content or functionality, to accommodate users with low vision.
+
+Config:
+ChatEnvConfig.with_memory: False
+ChatEnvConfig.clear_structure: True
+ChatEnvConfig.git_management: False
+ChatEnvConfig.gui_design: True
+ChatEnvConfig.incremental_develop: True
+ChatEnvConfig.background_prompt: ChatDev is a software company powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief technology officer, etc, with a multi-agent organizational structure and the mission of 'changing the digital world through programming'.
+
+
+Roster:
+Chief Executive Officer, Counselor, Chief Human Resource Officer, Chief Product Officer, Chief Technology Officer, Programmer, Code Reviewer, Software Test Engineer, Chief Creative Officer
+
+Modality:
+desktop application
+
+Ideas:
+
+
+Language:
+ Python
+
+Code_Version:
+3.0
+
+Proposed_images:
+0
+
+Incorporated_images:
+0
+

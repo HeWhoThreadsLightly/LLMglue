@@ -1,0 +1,1 @@
+self.square_size

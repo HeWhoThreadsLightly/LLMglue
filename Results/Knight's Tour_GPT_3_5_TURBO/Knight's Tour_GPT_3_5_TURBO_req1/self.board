@@ -1,0 +1,3 @@
+This method should call the `move` method of the `Knight` class to update the knight's position and then call the `draw` method of the `Board` class to redraw the board.
+Once you have added this method, you can bind it to the chessboard squares in the `draw` method of the `Board` class using the `bind` method of the `Canvas` widget. This will allow the player to click on a square to move the knight.
+You can add the following code to the `draw` method in the `Board` class:

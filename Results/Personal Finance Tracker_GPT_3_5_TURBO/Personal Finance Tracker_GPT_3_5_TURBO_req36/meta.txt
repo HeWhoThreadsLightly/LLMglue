@@ -1,0 +1,69 @@
+Task:
+This desktop application is designed to help users manage their personal finances, including tracking income, expenses, and investments. It will provide an easy-to-use interface for entering financial transactions, categorizing them, and generating reports to understand spending habits and financial health.
+REQ1 User interface requirement: Main windows and navigation: The application must feature a primary navigation menu or toolbar that allows users to switch between the main windows: Dashboard, Transactions, Reports, and Settings.
+REQ2 User interface requirement: Main windows and navigation: A startup screen should present users with an overview of their financial summary, including the current balance, recent transactions, and upcoming bills.
+REQ3 User interface requirement: Dashboard: The Dashboard should provide a quick overview of the user’s financial status, including total income, expenses for the current month, and a graph showing spending trends over the last six months.
+REQ4 User interface requirement: Dashboard: Widgets or cards displaying critical information such as upcoming bills, budget summary, and investment performance should be customizable and rearrangeable by the user.
+REQ5 User interface requirement: Transactions window: This window must allow users to view a list of all transactions, with filters to display transactions by date range, category, or income/expense type.
+REQ6 User interface requirement: Transactions window: Users should be able to add a new transaction via a form that includes fields for the transaction date, amount, category (with a dropdown to select from predefined or custom categories), payment method, and optional notes.
+REQ7 User interface requirement: Transactions window: Each transaction in the list should have options to edit or delete, accessible via context menu or buttons.
+REQ8 User interface requirement: Reports window: The Reports window should offer various reports on financial data, including spending by category, income vs. expenses over time, and monthly comparison charts.
+REQ9 User interface requirement: Reports window: Users should be able to select the report type from a dropdown menu, specify the date range, and filter by categories or income/expense type for more detailed analysis.
+REQ10 User interface requirement: Reports window: Reports should be visualized through charts and graphs, with the ability to export the report to PDF or image formats for sharing or printing.
+REQ11 User interface requirement: Settings window: In the Settings window, users must be able to adjust application preferences such as default currency, date format, application theme (light or dark mode), and notification preferences for reminders about bills and recurring transactions.
+REQ12 User interface requirement: Settings window: This window should also include options for data backup and restore, including exporting and importing the financial database in CSV format.
+REQ13 User interface requirement: Login and security: Upon launching the application, users should be greeted with a login screen to ensure that financial data is protected. The login screen should include fields for a password.
+REQ14 User interface requirement: Login and security: For data storage, consider using SQLite and encrypt the database with the users password when the app is closed.
+REQ15 User interface requirement: Login and security: The application should also provide a logout option accessible from the main navigation or user profile menu, allowing users to secure their session when not in use.
+REQ16 Additional feature requirement: Data management: The application must allow users to add, edit, and delete income and expense transactions.
+REQ17 Additional feature requirement: Data management: Users should be able to categorize transactions (e.g., groceries, utilities, salary) and create custom categories.
+REQ18 Additional feature requirement: Data management: There should be functionality to import and export financial data in CSV format for backup and data portability.
+REQ19 Additional feature requirement: Reporting: The software must generate visual reports (charts, graphs) to show spending trends over time, expense breakdown by category, and comparison of income vs. expenses.
+REQ20 Additional feature requirement: Reporting: It should offer customizable report parameters, such as time period and categories to include.
+REQ21 Additional feature requirement: Security: The application must provide secure storage of financial data, with options to encrypt the database file.
+REQ22 Additional feature requirement: Security: It should require user authentication (login) to access the financial data.
+REQ23 Additional feature requirement: Settings and customization: Users should be able to customize settings, such as default currency, date format, and application theme (light/dark mode).
+REQ24 Additional feature requirement: Settings and customization: The software should support notifications for recurring transactions and reminders for upcoming bills.
+REQ25 Additional feature requirement: Documentation and help: Comprehensive user documentation should be provided, detailing how to use the application and troubleshoot common issues.
+REQ26 Additional feature requirement: Development and technologies: The project can be developed using a cross-platform framework (such as Electron or Qt) to ensure compatibility across different operating systems.
+REQ27 Additional feature requirement: Development and technologies: For data storage, consider using SQLite or a similar lightweight database and encrypt the database with the users password that can be easily embedded into the application.
+REQ28 Additional feature requirement: Development and technologies: Implement unit and integration tests to ensure the reliability of financial calculations and data integrity.
+REQ29 Accessibility requirement: Keyboard navigation: Full functionality should be accessible via keyboard shortcuts to ensure that users who cannot use a mouse can navigate efficiently through the application.
+REQ30 Accessibility requirement: Keyboard navigation: Implement tab navigation through all interactive elements in a logical order.
+REQ31 Accessibility requirement: Keyboard navigation: Provide visual indicators for the currently focused element.
+REQ32 Accessibility requirement: Screen reader support: Ensure compatibility with leading screen readers to verbalize text and describe images, icons, and other non-textual elements.
+REQ33 Accessibility requirement: Screen reader support: Use ARIA (Accessible Rich Internet Applications) labels and roles for complex elements (like drag-and-drop interfaces or custom controls) to ensure their purpose and state are conveyed to screen reader users.
+REQ34 Accessibility requirement: High contrast mode: Support for high contrast themes that make text, icons, and other elements more distinguishable for users with low vision.
+REQ35 Accessibility requirement: High contrast mode: Ensure that all text is readable and all interactive elements are visible against background colors.
+REQ36 Accessibility requirement: Text size and font adjustments: Allow users to adjust text size without breaking the layout or losing functionality.
+
+Config:
+ChatEnvConfig.with_memory: False
+ChatEnvConfig.clear_structure: True
+ChatEnvConfig.git_management: False
+ChatEnvConfig.gui_design: True
+ChatEnvConfig.incremental_develop: True
+ChatEnvConfig.background_prompt: ChatDev is a software company powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief technology officer, etc, with a multi-agent organizational structure and the mission of 'changing the digital world through programming'.
+
+
+Roster:
+Chief Executive Officer, Counselor, Chief Human Resource Officer, Chief Product Officer, Chief Technology Officer, Programmer, Code Reviewer, Software Test Engineer, Chief Creative Officer
+
+Modality:
+desktop application
+
+Ideas:
+
+
+Language:
+ Python
+
+Code_Version:
+3.0
+
+Proposed_images:
+0
+
+Incorporated_images:
+0
+

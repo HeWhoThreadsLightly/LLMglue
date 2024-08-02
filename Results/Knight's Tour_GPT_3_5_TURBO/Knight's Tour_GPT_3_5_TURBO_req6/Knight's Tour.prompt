@@ -1,0 +1,7 @@
+Develop a desktop puzzle game based on the mathematical problem known as the "Knight's Tour". In this game, the player controls a chess knight, and the objective is to move the knight across a chessboard (or any m x n grid) so that it visits every square exactly once. The challenge increases with the size of the board, and the game can offer various levels of difficulty. The knight moves in an L-shape, as it does in traditional chess
+REQ1 User interface: Main menu: Start Game: Begins a new game. Players can select the difficulty level or board size here.
+REQ2 User interface: Main menu: Options/Settings: Allows players to customize game settings, including sound volume, visual themes, and knight/chessboard appearances.
+REQ3 User interface: Main menu: Tutorial: A brief interactive or video tutorial on how the game is played, detailing the knight's legal moves.
+REQ4 User interface: Main menu: High Scores: Displays a list of high scores, possibly with filters for different board sizes.
+REQ5 User interface: Main menu: Exit: Quits the game.
+REQ6 User interface: Game window: Chessboard/Grid Display: Centrally displays the game board with a clear distinction between visited and unvisited squares. The current position of the knight is highlighted.

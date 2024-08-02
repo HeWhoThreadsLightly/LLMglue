@@ -1,0 +1,45 @@
+Task:
+Develop a desktop puzzle game based on the mathematical problem known as the "Knight's Tour". In this game, the player controls a chess knight, and the objective is to move the knight across a chessboard (or any m x n grid) so that it visits every square exactly once. The challenge increases with the size of the board, and the game can offer various levels of difficulty. The knight moves in an L-shape, as it does in traditional chess
+REQ1 User interface: Main menu: Start Game: Begins a new game. Players can select the difficulty level or board size here.
+REQ2 User interface: Main menu: Options/Settings: Allows players to customize game settings, including sound volume, visual themes, and knight/chessboard appearances.
+REQ3 User interface: Main menu: Tutorial: A brief interactive or video tutorial on how the game is played, detailing the knight's legal moves.
+REQ4 User interface: Main menu: High Scores: Displays a list of high scores, possibly with filters for different board sizes.
+REQ5 User interface: Main menu: Exit: Quits the game.
+REQ6 User interface: Game window: Chessboard/Grid Display: Centrally displays the game board with a clear distinction between visited and unvisited squares. The current position of the knight is highlighted.
+REQ7 User interface: Game window: Move Counter: Shows the number of moves made by the player.
+REQ8 User interface: Game window: Timer: (Optional) A timer showing how long the player has been attempting the current puzzle.
+REQ9 User interface: Game window: Undo Button: Allows the player to undo the last move. This could be limited to a certain number of uses.
+REQ10 User interface: Game window: Hint Button: Provides a hint for the next move. This could be limited to ensure the game remains challenging.
+REQ11 User interface: Game window: Pause/Menu Button: Pauses the game and opens a menu for accessing settings, returning to the main menu, or restarting the game.
+REQ12 User Interface: Options/Settings Window: Visual Settings: Options to change the theme of the chessboard and the knight. This could include color schemes or graphical styles.
+
+Config:
+ChatEnvConfig.with_memory: False
+ChatEnvConfig.clear_structure: True
+ChatEnvConfig.git_management: False
+ChatEnvConfig.gui_design: True
+ChatEnvConfig.incremental_develop: True
+ChatEnvConfig.background_prompt: ChatDev is a software company powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief technology officer, etc, with a multi-agent organizational structure and the mission of 'changing the digital world through programming'.
+
+
+Roster:
+Chief Executive Officer, Counselor, Chief Human Resource Officer, Chief Product Officer, Chief Technology Officer, Programmer, Code Reviewer, Software Test Engineer, Chief Creative Officer
+
+Modality:
+desktop application
+
+Ideas:
+
+
+Language:
+ Python
+
+Code_Version:
+3.0
+
+Proposed_images:
+0
+
+Incorporated_images:
+0
+
