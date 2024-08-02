@@ -1,4 +1,5 @@
 import tkinter as tk
+from pprint import pprint
 from tkinter import ttk, filedialog, messagebox
 import subprocess
 import os
@@ -25,22 +26,22 @@ class CodeGeneratorUI:
         self.model_types = ["GPT_3_5_TURBO", "GPT_4", "GPT_4_32K", "GPT_4_TURBO"]
         self.project_files = self.load_project_files()
 
-        self.create_widgets()
         self.running = False
         self.thread = None
 
         self.args = args
-        self.dry_run = ParseBool(args.dry_run)
-        if not self.dry_run:
-            print(
-                "Not a dry Run!")  # for extra safety during testing running the full suit accidentally would be expencive
-            exit(1)
+        self.dry_run = tk.BooleanVar(value=ParseBool(args.dry_run))
+        self.create_widgets()
 
     def load_project_files(self):
         project_files_dir = "Requirements"
         return [f for f in os.listdir(project_files_dir) if os.path.isfile(os.path.join(project_files_dir, f))]
 
     def create_widgets(self):
+        # Dry run checkbox
+        self.dry_run_checkbox = tk.Checkbutton(self.root, text="Dry Run", variable=self.dry_run)
+        self.dry_run_checkbox.grid(row=3, column=0, padx=10, pady=10)
+
         # Model type selection with checkboxes
         self.model_label = tk.Label(self.root, text="Model Types:")
         self.model_label.grid(row=0, column=0, padx=10, pady=10)
@@ -87,6 +88,7 @@ class CodeGeneratorUI:
 
     def run_code_generator(self, model_types, project_files):
         print("run_code_generator", model_types, project_files)
+        print("dry run", self.dry_run.get())
         for model_type in model_types:
             for project_file in project_files:
                 if not self.running:
@@ -113,7 +115,7 @@ class CodeGeneratorUI:
                     # Create the prompt for the AI
                     task_prompt = project_overview + '\n' + '\n'.join(requirements[:i])
                     # Run ChatDev, use default on first run incremental on following runs
-                    previous_version_dir, info = run_chat_dev(args, project_name, task_prompt, model_type, previous_version_dir, incremental=(i != 1), dry_run=self.dry_run)
+                    previous_version_dir, info = run_chat_dev(args, project_name, task_prompt, model_type, previous_version_dir, incremental=(i != 1), dry_run=self.dry_run.get())
 
                     print(previous_version_dir, info.str)
 
@@ -134,8 +136,9 @@ class CodeGeneratorUI:
                     progress["current_req"] = i + 1
                     progress["previous_version_dir"] = previous_version_dir
                     progress["info"][f"req{i}"] = info.to_dict()
+                    pprint(progress)
                     with open(progress_file, 'w') as f:
-                        json.dump(progress, f)
+                        json.dump(progress, f, indent=4)
 
         self.running = False
         self.stop_button.config(state=tk.DISABLED)

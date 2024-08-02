@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import re
@@ -27,6 +28,19 @@ except ImportError:
         "Warning: Your OpenAI version is outdated. \n "
         "Please update as specified in requirement.txt. \n "
         "The old API interface is deprecated and will no longer be supported.")
+
+
+class NpEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, np.integer):
+            return int(obj)
+        if isinstance(obj, np.floating):
+            return float(obj)
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        if isinstance(obj, np.bool_):
+            return bool(obj)
+        return super(NpEncoder, self).default(obj)
 
 
 def get_config(company):
@@ -84,7 +98,7 @@ class Info:
         self.end_time = -1
 
     def to_dict(self):
-        return {
+        return json.loads(json.dumps({
             "model_type": self.model_type,
             "str": self.str,
             "cost": self.cost,
@@ -103,7 +117,7 @@ class Info:
             "num_total_tokens": self.num_total_tokens
             #"start_time": self.start_time,
             #"end_time": self.end_time,
-        }
+        }, cls = NpEncoder))
 
 def get_info(dir, log_filepath):
     print("dir:", dir)
@@ -269,7 +283,8 @@ def get_info(dir, log_filepath):
 
     return info
 
-def run_chat_dev(args, project_name, task_prompt, model_type, code_path, incremental: bool, dry_run: bool=False):
+
+def run_chat_dev(args, project_name: str, task_prompt: str, model_type: str, code_path: str, incremental: bool, dry_run: bool=False) -> (str, str):
     config = ["Default", "Incremental"][incremental]
     config_path, config_phase_path, config_role_path = get_config(config)
     # Start ChatDev
@@ -301,7 +316,7 @@ def run_chat_dev(args, project_name, task_prompt, model_type, code_path, increme
     # ----------------------------------------
     logging.basicConfig(filename=chat_chain.log_filepath, level=logging.INFO,
                         format='[%(asctime)s %(levelname)s] %(message)s',
-                        datefmt='%Y-%d-%m %H:%M:%S', encoding="utf-8")
+                        datefmt='%Y-%d-%m %H:%M:%S', encoding="utf-8", force=True)
 
 
     # ----------------------------------------
@@ -315,7 +330,7 @@ def run_chat_dev(args, project_name, task_prompt, model_type, code_path, increme
     if dry_run:
         Path(chat_chain.log_filepath).touch()
         with open(os.path.join(software_path, "main.py"), "w") as code:
-            code.write("print('Hello world')")
+            code.write("print('Dry run')")
         chat_chain.post_processing()
         return software_path, get_info(software_path, os.path.join(software_path, f"{dir_name}.log"))
 
@@ -341,6 +356,6 @@ def run_chat_dev(args, project_name, task_prompt, model_type, code_path, increme
 
 
 if __name__ == "__main__":
-    dir_path = os.path.join("Results", "First", "FOCM_GPT_3_5_TURBO", "QRCodeGenerator", "QRCodeGenerator_THUNLP_20231015214731")
-    info = get_info(dir_path, os.path.join(dir_path, "QRCodeGenerator_THUNLP_20231015214731.log"))
-    print(info.str)
+    dir_path = os.path.join("Results", "Personal Finance Tracker_GPT_3_5_TURBO", "Personal Finance Tracker_GPT_3_5_TURBO_req1")
+    info = get_info(dir_path, os.path.join(dir_path, "Personal Finance Tracker_DefaultOrganization_20240801135633.log"))
+    print(info.to_dict())
