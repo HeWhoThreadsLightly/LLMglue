@@ -1,6 +1,6 @@
 {
-    "current_req": 40,
-    "previous_version_dir": "/home/chatdev/git/LLMglue/ChatDev/WareHouse/Personal Finance Tracker_DefaultOrganization_20240801194610",
+    "current_req": 41,
+    "previous_version_dir": "/home/chatdev/git/LLMglue/ChatDev/WareHouse/Personal Finance Tracker_DefaultOrganization_20240802121214",
     "info": {
         "req1": {
             "model_type": "gpt-3.5-turbo",
@@ -703,6 +703,24 @@
             "num_prompt_tokens": 66009,
             "num_completion_tokens": 13152,
             "num_total_tokens": 79161
+        },
+        "req40": {
+            "model_type": "gpt-3.5-turbo",
+            "str": "\n\n\ud83d\udcb0**cost**=$0.246491\n\n\ud83d\udd28**version_updates**=4.0\n\n\ud83d\udcc3**num_code_files**=5\n\n\ud83c\udfde**num_png_files**=0\n\n\ud83d\udcda**num_doc_files**=8\n\n\ud83d\udcc3**code_lines**=393\n\n\ud83d\udccb**env_lines**=2\n\n\ud83d\udcd2**manual_lines**=103\n\n\ud83d\udde3**num_utterances**=43\n\n\ud83e\udd14**num_self_reflections**=2\n\n\u2753**num_prompt_tokens**=143199\n\n\u2757**num_completion_tokens**=15846\n\n\ud83c\udf1f**num_total_tokens**=159045\n\n\ud83d\udd51**duration**=247.0s",
+            "cost": 0.24649050000000003,
+            "version_updates": 4.0,
+            "num_code_files": 5,
+            "num_png_files": 0,
+            "num_doc_files": 8,
+            "code_lines": 393,
+            "env_lines": 2,
+            "manual_lines": 103,
+            "duration": 247.0,
+            "num_utterance": 43,
+            "num_reflection": 2,
+            "num_prompt_tokens": 143199,
+            "num_completion_tokens": 15846,
+            "num_total_tokens": 159045
         }
     }
 }

@@ -1,0 +1,85 @@
+Task:
+The File Organizer and Content Manager (FOCM) is a desktop application designed to help users efficiently organize, search, and manage their local files. This software aims to enhance productivity and file management through automated organization, advanced search capabilities, and content management features. It will support various file types, including documents, images, videos, and more, providing a unified interface for managing digital content.
+REQ1 User interface: Main window: The central hub of the application featuring a dual-pane layout: one pane for the directory tree (folders) and another for viewing the contents of the selected directory.
+REQ2 User interface: Main window: A toolbar at the top with buttons for common actions (create new folder, delete file, refresh view, toggle between list/grid view, search bar).
+REQ3 User interface: Main window: Status bar at the bottom displaying information about the selected files/folders and general statistics (total files, total size).
+REQ4 User interface: Search and filter panel: A dedicated panel, accessible from the main window, allowing users to enter search criteria, choose filters (file type, date modified, size), and display results in a list or grid format.
+REQ5 User interface: Search and filter panel: Advanced search options for more precise filtering, including full-text search within documents.
+REQ6 User interface: File preview window: A pop-up or sidebar window that provides a quick preview of the selected file. For text documents and images, show a preview within the window. For videos and audio files, provide basic playback controls.
+REQ7 User interface: File preview window: Edit mode for text files, enabling users to make quick edits directly within the preview window.
+REQ8 User interface: File properties and metadata editor: A dialog box that displays when a user selects "Properties" from the context menu of a file/folder. Shows detailed information including file size, creation/modification dates, and allows the user to edit metadata tags.
+REQ9 User interface: Settings/Preferences Window: A separate window accessible from the main menu, allowing users to customize application settings. This includes theme selection (dark/light), default views, file organization rules, backup settings, and extension/plugin management.
+REQ10 User interface: Tag management interface: A panel or window for creating, editing, and deleting tags. Users can also assign tags to files or folders from this interface, providing a flexible way to categorize and locate files quickly.
+REQ11 User interface: Backup and synchronization setup wizard: A step-by-step wizard that guides users through setting up backup destinations (external drive, cloud storage) and synchronization options, including scheduling automatic backups.
+REQ12 User interface: Help and tutorial section: A dedicated window or section accessible from the main menu, offering a searchable help database, user manual, and interactive tutorials on key features.
+REQ13 File organization requirements: Automated organization rules: The application must allow users to create customizable rules for automatically organizing files. These rules can be based on:
+REQ14 File organization requirements: Automated organization rules: File type (e.g., documents, images, music, videos).
+REQ15 File organization requirements: Automated organization rules: Date criteria (e.g., creation date, modification date).
+REQ16 File organization requirements: Automated organization rules: File name patterns (e.g., using wildcards or regular expressions).
+REQ17 File organization requirements: Automated organization rules: File size thresholds.
+REQ18 File organization requirements: Automated organization rules: Users should be able to specify the target folder structure for organized files, with options to create new folders based on rule criteria (e.g., date, project name).
+REQ19 File organization requirements: Manual tagging and categorization: Users must be able to assign custom tags to files and folders manually.
+REQ20 File organization requirements: Manual tagging and categorization: The application should offer a tagging interface that suggests existing tags as the user types and allows the creation of new tags.
+REQ21 File organization requirements: Manual tagging and categorization: Support for creating custom categories where users can group files/folders based on project, client, priority, or any other user-defined category.
+REQ22 File organization requirements: Manual tagging and categorization: Users should be able to view and access files by tags and categories through a dedicated interface or filter.
+REQ23 File organization requirements: Bulk file operations: The application must support bulk operations to rename, move, copy, or delete multiple files at once based on user selection.
+REQ24 File organization requirements: Bulk file operations: Include options for bulk applying tags or moving files to a category, with undo functionality to revert changes if needed.
+REQ25 File organization requirements: Folder and file management: Users must be able to create, rename, move, and delete files and folders from within the application.
+REQ26 File organization requirements: Folder and file management: The application should provide a drag-and-drop interface for moving files and folders into different categories or locations.
+REQ27 File organization requirements: Folder and file management: Include a feature to detect and resolve duplicate files based on name, size, and optionally content hash. The application should offer options to keep, delete, or merge duplicate files.
+REQ28 File organization requirements: Custom folder views and sorting: Allow users to customize how folders and files are displayed (e.g., list, grid, thumbnail views).
+REQ29 File organization requirements: Custom folder views and sorting: Support for sorting files and folders by name, size, date modified, or custom tags/categories.
+REQ30 File Organization Requirements: File Watcher and Auto-Update: Implement a file watcher mechanism that automatically updates file organization based on predefined rules when new files are added to monitored folders.
+REQ31 File Organization Requirements: File Watcher and Auto-Update: This feature should work in real-time or at user-defined intervals, ensuring the organization structure is always up-to-date.
+REQ32 File organization requirements: Integration with file system: The application should integrate closely with the operating system's file system to reflect changes made within the app in real-time in the user's file explorer or finder.
+REQ33 File organization requirements: Integration with file system: Support for right-click context menu options in the operating system’s file explorer to quickly tag, categorize, or apply predefined organization rules to selected files or folders.
+REQ34 Search and filter requirements: Advanced search functionality: Ability to search for files and folders using partial or full file names.
+REQ35 Search and filter requirements: Advanced search functionality: Content-based search capabilities that allow users to find files containing specific text, even within documents or metadata for images and videos.
+REQ36 Search and filter requirements: Advanced search functionality: Support for regular expressions (regex) in search queries for complex pattern matching.
+REQ37 Search and filter requirements: Custom search filters: Predefined filters to quickly select files based on common criteria such as file type (e.g., documents, images, videos), size (e.g., less than 10MB), and modification or creation date (e.g., last 7 days).
+REQ38 Search and filter requirements: Custom search filters: User-defined filters where users can create, save, and apply custom filter sets based on any combination of file attributes, including custom tags, project names, or specific content.
+REQ39 Search and Filter Requirements: Tag-Based Searching: Integration of a tagging system where users can assign custom tags to files and folders, and then search for these tags.
+REQ40 Search and Filter Requirements: Tag-Based Searching: Support for hierarchical tags (e.g., Work/Project1, Personal/Photos) to facilitate detailed organization and searching.
+REQ41 Search and filter requirements: Search history and saved searches: Automatic saving of recent searches for quick repetition.
+REQ42 Search and filter requirements: Search history and saved searches: Ability for users to save frequently used search queries or filters for quick access.
+REQ43 Search and filter requirements: Search results management: Sortable search results based on various criteria such as name, size, date modified, and custom tags.
+REQ44 Search and filter requirements: Search results management: Option to export search results to CSV or other formats for external use.
+REQ45 Search and filter requirements: Search results management: Batch operations on search results, allowing users to apply actions (e.g., move, delete, tag) to multiple files at once.
+REQ46 Search and filter requirements: Contextual actions: Right-click context menu in search results to provide quick access to common file operations like open, rename, delete, move, or edit tags.
+REQ47 Search and filter requirements: Contextual actions: Preview option directly in the context menu for images, documents, and videos.
+REQ48 Search and filter requirements: Smart suggestions: As users type in the search bar, the system should offer smart suggestions based on their input, historical searches, and commonly accessed files.
+REQ49 Search and filter requirements: Smart suggestions: Suggest tags, filenames, and content snippets as possible search queries.
+REQ50 Search and filter requirements: Integration with file organization: Seamless integration with the file organization system, allowing users to quickly organize search results into folders or tag groups directly from the search interface.
+REQ51 Additional feature requirements: Content management: Preview capabilities for common file types (PDF, DOCX, images, videos) directly within the application.
+REQ52 Additional feature requirements: Content management: Basic editing tools for text files and images, such as text formatting and cropping.
+
+Config:
+ChatEnvConfig.with_memory: False
+ChatEnvConfig.clear_structure: True
+ChatEnvConfig.git_management: False
+ChatEnvConfig.gui_design: True
+ChatEnvConfig.incremental_develop: True
+ChatEnvConfig.background_prompt: ChatDev is a software company powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief technology officer, etc, with a multi-agent organizational structure and the mission of 'changing the digital world through programming'.
+
+
+Roster:
+Chief Executive Officer, Counselor, Chief Human Resource Officer, Chief Product Officer, Chief Technology Officer, Programmer, Code Reviewer, Software Test Engineer, Chief Creative Officer
+
+Modality:
+desktop application
+
+Ideas:
+
+
+Language:
+ Python
+
+Code_Version:
+3.0
+
+Proposed_images:
+0
+
+Incorporated_images:
+0
+

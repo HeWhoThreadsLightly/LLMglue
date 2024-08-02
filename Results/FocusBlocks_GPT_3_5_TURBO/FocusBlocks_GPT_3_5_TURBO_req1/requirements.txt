@@ -1,0 +1,2 @@
+# FocusBlocks requirements.txt
+# No external dependencies required at the moment

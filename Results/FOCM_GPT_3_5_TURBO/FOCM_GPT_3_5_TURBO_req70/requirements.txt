@@ -1,0 +1,3 @@
+Pillow==8.2.0
+python-magic==0.4.22
+tkinter==8.6

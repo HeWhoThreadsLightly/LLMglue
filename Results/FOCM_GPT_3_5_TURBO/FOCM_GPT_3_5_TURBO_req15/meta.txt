@@ -1,0 +1,48 @@
+Task:
+The File Organizer and Content Manager (FOCM) is a desktop application designed to help users efficiently organize, search, and manage their local files. This software aims to enhance productivity and file management through automated organization, advanced search capabilities, and content management features. It will support various file types, including documents, images, videos, and more, providing a unified interface for managing digital content.
+REQ1 User interface: Main window: The central hub of the application featuring a dual-pane layout: one pane for the directory tree (folders) and another for viewing the contents of the selected directory.
+REQ2 User interface: Main window: A toolbar at the top with buttons for common actions (create new folder, delete file, refresh view, toggle between list/grid view, search bar).
+REQ3 User interface: Main window: Status bar at the bottom displaying information about the selected files/folders and general statistics (total files, total size).
+REQ4 User interface: Search and filter panel: A dedicated panel, accessible from the main window, allowing users to enter search criteria, choose filters (file type, date modified, size), and display results in a list or grid format.
+REQ5 User interface: Search and filter panel: Advanced search options for more precise filtering, including full-text search within documents.
+REQ6 User interface: File preview window: A pop-up or sidebar window that provides a quick preview of the selected file. For text documents and images, show a preview within the window. For videos and audio files, provide basic playback controls.
+REQ7 User interface: File preview window: Edit mode for text files, enabling users to make quick edits directly within the preview window.
+REQ8 User interface: File properties and metadata editor: A dialog box that displays when a user selects "Properties" from the context menu of a file/folder. Shows detailed information including file size, creation/modification dates, and allows the user to edit metadata tags.
+REQ9 User interface: Settings/Preferences Window: A separate window accessible from the main menu, allowing users to customize application settings. This includes theme selection (dark/light), default views, file organization rules, backup settings, and extension/plugin management.
+REQ10 User interface: Tag management interface: A panel or window for creating, editing, and deleting tags. Users can also assign tags to files or folders from this interface, providing a flexible way to categorize and locate files quickly.
+REQ11 User interface: Backup and synchronization setup wizard: A step-by-step wizard that guides users through setting up backup destinations (external drive, cloud storage) and synchronization options, including scheduling automatic backups.
+REQ12 User interface: Help and tutorial section: A dedicated window or section accessible from the main menu, offering a searchable help database, user manual, and interactive tutorials on key features.
+REQ13 File organization requirements: Automated organization rules: The application must allow users to create customizable rules for automatically organizing files. These rules can be based on:
+REQ14 File organization requirements: Automated organization rules: File type (e.g., documents, images, music, videos).
+REQ15 File organization requirements: Automated organization rules: Date criteria (e.g., creation date, modification date).
+
+Config:
+ChatEnvConfig.with_memory: False
+ChatEnvConfig.clear_structure: True
+ChatEnvConfig.git_management: False
+ChatEnvConfig.gui_design: True
+ChatEnvConfig.incremental_develop: True
+ChatEnvConfig.background_prompt: ChatDev is a software company powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief technology officer, etc, with a multi-agent organizational structure and the mission of 'changing the digital world through programming'.
+
+
+Roster:
+Chief Executive Officer, Counselor, Chief Human Resource Officer, Chief Product Officer, Chief Technology Officer, Programmer, Code Reviewer, Software Test Engineer, Chief Creative Officer
+
+Modality:
+desktop application
+
+Ideas:
+
+
+Language:
+ Python
+
+Code_Version:
+3.0
+
+Proposed_images:
+0
+
+Incorporated_images:
+0
+

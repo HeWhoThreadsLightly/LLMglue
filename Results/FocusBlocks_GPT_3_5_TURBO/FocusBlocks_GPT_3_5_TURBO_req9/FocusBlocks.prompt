@@ -1,0 +1,10 @@
+"FocusBlocks" is a productivity tool designed to help users manage their time effectively using the Pomodoro technique with a twist. The application not only acts as a simple timer but also blocks distracting websites and applications during focus sessions. It includes features for task management, allowing users to allocate specific tasks to each focus session and track their progress over time.
+REQ1 Core features: Pomodoro timer: The application must allow users to start, pause, and stop a focus session based on the Pomodoro technique.
+REQ2 Core features: Pomodoro timer: Users should be able to customize the duration of focus sessions and break intervals, with default settings being 25 minutes for focus and 5 minutes for short breaks. An option for longer breaks (15 minutes) after every four focus sessions should also be included.
+REQ3 Core features: Pomodoro timer: Visual and audio notifications to alert users when a session starts or ends, and when it's time for a break.
+REQ4 Core features: Distracting website and application blocker: During focus sessions, the application must block access to a user-customizable list of websites and applications that are deemed distracting (e.g., social media, streaming services).
+REQ5 Core features: Distracting website and application blocker: The app should provide an easy-to-use interface for adding or removing websites and applications from the block list.
+REQ6 Core features: Distracting website and application blocker: The blocking feature must be robust enough to prevent easy bypasses, such as using a different browser or renaming the application's executable file.
+REQ7 Core features: Task management: Users must be able to create a list of tasks they plan to work on during each focus session.
+REQ8 Core features: Task management: Each task should have a title, a brief description, an estimated duration (number of Pomodoros), and a completion status.
+REQ9 Core features: Task management: The application should allow users to edit task details, mark tasks as complete, and review completed tasks at the end of each day or session.

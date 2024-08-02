@@ -1,6 +1,6 @@
 {
-    "current_req": 45,
-    "previous_version_dir": "/home/chatdev/git/LLMglue/ChatDev/WareHouse/Knight's Tour_DefaultOrganization_20240801231500",
+    "current_req": 46,
+    "previous_version_dir": "/home/chatdev/git/LLMglue/ChatDev/WareHouse/Knight's Tour_DefaultOrganization_20240802121623",
     "info": {
         "req1": {
             "model_type": "gpt-3.5-turbo",
@@ -793,6 +793,24 @@
             "num_prompt_tokens": 68418,
             "num_completion_tokens": 9428,
             "num_total_tokens": 77846
+        },
+        "req45": {
+            "model_type": "gpt-3.5-turbo",
+            "str": "\n\n\ud83d\udcb0**cost**=$0.116038\n\n\ud83d\udd28**version_updates**=4.0\n\n\ud83d\udcc3**num_code_files**=8\n\n\ud83c\udfde**num_png_files**=0\n\n\ud83d\udcda**num_doc_files**=8\n\n\ud83d\udcc3**code_lines**=333\n\n\ud83d\udccb**env_lines**=3\n\n\ud83d\udcd2**manual_lines**=58\n\n\ud83d\udde3**num_utterances**=22\n\n\ud83e\udd14**num_self_reflections**=1\n\n\u2753**num_prompt_tokens**=64756\n\n\u2757**num_completion_tokens**=9452\n\n\ud83c\udf1f**num_total_tokens**=74208\n\n\ud83d\udd51**duration**=142.0s",
+            "cost": 0.116038,
+            "version_updates": 4.0,
+            "num_code_files": 8,
+            "num_png_files": 0,
+            "num_doc_files": 8,
+            "code_lines": 333,
+            "env_lines": 3,
+            "manual_lines": 58,
+            "duration": 142.0,
+            "num_utterance": 22,
+            "num_reflection": 1,
+            "num_prompt_tokens": 64756,
+            "num_completion_tokens": 9452,
+            "num_total_tokens": 74208
         }
     }
 }
