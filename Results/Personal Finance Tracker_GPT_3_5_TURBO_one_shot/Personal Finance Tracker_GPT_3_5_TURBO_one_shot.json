@@ -1,0 +1,25 @@
+{
+    "current_req": 41,
+    "previous_version_dir": "/home/chatdev/git/LLMglue/ChatDev/WareHouse/Personal Finance Tracker_DefaultOrganization_20240821154506",
+    "info": {
+        "req40": {
+            "model_type": "gpt-3.5-turbo",
+            "str": "\n\n\ud83d\udcb0**cost**=$0.097287\n\n\ud83d\udd28**version_updates**=5.0\n\n\ud83d\udcc3**num_code_files**=5\n\n\ud83c\udfde**num_png_files**=0\n\n\ud83d\udcda**num_doc_files**=8\n\n\ud83d\udcc3**code_lines**=164\n\n\ud83d\udccb**env_lines**=4\n\n\ud83d\udcd2**manual_lines**=100\n\n\ud83d\udde3**num_utterances**=26\n\n\ud83e\udd14**num_self_reflections**=1\n\n\u2753**num_prompt_tokens**=54569\n\n\u2757**num_completion_tokens**=7717\n\n\ud83c\udf1f**num_total_tokens**=62286\n\n\ud83d\udd51**duration**=275.0s",
+            "cost": 0.0972875,
+            "version_updates": 5.0,
+            "num_code_files": 5,
+            "num_png_files": 0,
+            "num_doc_files": 8,
+            "code_lines": 164,
+            "env_lines": 4,
+            "manual_lines": 100,
+            "duration": 275.0,
+            "num_utterance": 26,
+            "num_reflection": 1,
+            "num_prompt_tokens": 54569,
+            "num_completion_tokens": 7717,
+            "num_total_tokens": 62286
+        }
+    },
+    "one_shot": true
+}

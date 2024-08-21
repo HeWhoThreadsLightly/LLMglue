@@ -1,0 +1,25 @@
+{
+    "current_req": 35,
+    "previous_version_dir": "/home/chatdev/git/LLMglue/ChatDev/WareHouse/FocusBlocks_DefaultOrganization_20240821160753",
+    "info": {
+        "req34": {
+            "model_type": "gpt-3.5-turbo",
+            "str": "\n\n\ud83d\udcb0**cost**=$0.259311\n\n\ud83d\udd28**version_updates**=13.0\n\n\ud83d\udcc3**num_code_files**=7\n\n\ud83c\udfde**num_png_files**=0\n\n\ud83d\udcda**num_doc_files**=15\n\n\ud83d\udcc3**code_lines**=245\n\n\ud83d\udccb**env_lines**=4\n\n\ud83d\udcd2**manual_lines**=161\n\n\ud83d\udde3**num_utterances**=40\n\n\ud83e\udd14**num_self_reflections**=1\n\n\u2753**num_prompt_tokens**=90254\n\n\u2757**num_completion_tokens**=61965\n\n\ud83c\udf1f**num_total_tokens**=152219\n\n\ud83d\udd51**duration**=1082.0s",
+            "cost": 0.259311,
+            "version_updates": 13.0,
+            "num_code_files": 7,
+            "num_png_files": 0,
+            "num_doc_files": 15,
+            "code_lines": 245,
+            "env_lines": 4,
+            "manual_lines": 161,
+            "duration": 1082.0,
+            "num_utterance": 40,
+            "num_reflection": 1,
+            "num_prompt_tokens": 90254,
+            "num_completion_tokens": 61965,
+            "num_total_tokens": 152219
+        }
+    },
+    "one_shot": true
+}

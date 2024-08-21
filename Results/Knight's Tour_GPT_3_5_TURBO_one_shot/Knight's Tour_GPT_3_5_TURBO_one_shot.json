@@ -1,0 +1,25 @@
+{
+    "current_req": 46,
+    "previous_version_dir": "/home/chatdev/git/LLMglue/ChatDev/WareHouse/Knight's Tour_DefaultOrganization_20240821154942",
+    "info": {
+        "req45": {
+            "model_type": "gpt-3.5-turbo",
+            "str": "\n\n\ud83d\udcb0**cost**=$0.134036\n\n\ud83d\udd28**version_updates**=8.0\n\n\ud83d\udcc3**num_code_files**=2\n\n\ud83c\udfde**num_png_files**=0\n\n\ud83d\udcda**num_doc_files**=8\n\n\ud83d\udcc3**code_lines**=224\n\n\ud83d\udccb**env_lines**=1\n\n\ud83d\udcd2**manual_lines**=108\n\n\ud83d\udde3**num_utterances**=31\n\n\ud83e\udd14**num_self_reflections**=1\n\n\u2753**num_prompt_tokens**=71093\n\n\u2757**num_completion_tokens**=13698\n\n\ud83c\udf1f**num_total_tokens**=84791\n\n\ud83d\udd51**duration**=232.0s",
+            "cost": 0.1340355,
+            "version_updates": 8.0,
+            "num_code_files": 2,
+            "num_png_files": 0,
+            "num_doc_files": 8,
+            "code_lines": 224,
+            "env_lines": 1,
+            "manual_lines": 108,
+            "duration": 232.0,
+            "num_utterance": 31,
+            "num_reflection": 1,
+            "num_prompt_tokens": 71093,
+            "num_completion_tokens": 13698,
+            "num_total_tokens": 84791
+        }
+    },
+    "one_shot": true
+}

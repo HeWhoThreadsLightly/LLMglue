@@ -1,0 +1,87 @@
+Task:
+Develop a simple yet engaging Memory Match game that can be played on the desktop. The game will present the player with a grid of cards, face down. Each card has a matching counterpart somewhere in the grid. The objective of the game is for the player to find all the matching pairs by remembering the locations of cards they have previously turned over. This game can be enhanced with different themes, difficulty levels, and maybe even a timer to challenge the player further.
+REQ1 Main menu window: Title: Display the game title prominently at the top.
+REQ2 Main menu window: Play button: A button to start the game. Clicking this button takes the player to the "Select Difficulty" window.
+REQ3 Main menu window: High scores button: Opens a window displaying the high scores from previous games, including the player's name, score, and time.
+REQ4 Main menu window: Settings button: Leads to a settings window where players can adjust sound preferences, choose themes, and view game instructions.
+REQ5 Main menu window: Exit button: A button to exit the game.
+REQ6 Select difficulty window: Instruction text: A brief instruction on how to select the difficulty level.
+REQ7 Select difficulty window: Difficulty level buttons: Buttons for each difficulty level (Easy, Medium, Hard). Clicking on one sets the game's difficulty and starts the game.
+REQ8 Select difficulty window: Back button: Returns to the Main Menu.
+REQ9 Game window: Game grid: The central area where the cards are displayed according to the chosen difficulty level. Cards should be arranged in a grid layout that changes size based on the difficulty.
+REQ10 Game window: Score panel: A panel displaying the current number of attempts, number of matches found, and the elapsed time.
+REQ11 Game Window: Pause/Menu Button: Pauses the game and opens a small menu with options to resume, restart, change difficulty, or return to the Main Menu.
+REQ12 Settings window: Sound settings: Toggle switches for game sound effects and background music.
+REQ13 Settings window: Theme selection: Dropdown menu or buttons to select the card and background theme.
+REQ14 Settings window: Instructions: A section that outlines the game rules and controls.
+REQ15 Settings window: Back button: Saves any changes and returns to the Main Menu.
+REQ16 High scores window: Scores display: A list or table displaying the top scores, including details such as player name, score (based on attempts and time), and difficulty level.
+REQ17 High scores window: Clear scores button: An option to clear the high score history.
+REQ18 High scores window: Back button: Returns to the Main Menu.
+REQ19 Game Over/Win Window: Message: Displays a congratulatory message for completing the game and shows the final score and time.
+REQ20 Game Over/Win Window: Play Again Button: Restarts the game at the same difficulty level.
+REQ21 Game Over/Win Window: Change Difficulty Button: Returns the player to the "Select Difficulty" window to choose a new difficulty level.
+REQ22 Game Over/Win Window: Main Menu Button: Returns to the Main Menu.
+REQ23 Additional feature requirements: Game logic: Ability to shuffle and randomly place the cards at the start of each game.
+REQ24 Additional feature requirements: Game logic: Mechanism to flip cards and reveal their faces when clicked.
+REQ25 Additional feature requirements: Game logic: Check for matches when two cards are flipped; if they match, leave them face up, otherwise flip them back.
+REQ26 Additional feature requirements: Game logic: Keep track of the number of attempts made and matches found.
+REQ27 Additional feature requirements: Game logic: Implement a win condition when all matches are found.
+REQ28 Additional feature requirements: Difficulty levels: Provide at least three levels of difficulty (e.g., Easy: 4x4 grid, Medium: 6x6 grid, Hard: 8x8 grid).
+REQ29 Additional feature requirements: Difficulty levels: The difficulty level affects the number of cards (and thus, the number of matches) that need to be found.
+REQ30 Additional feature requirements: Themes and customization: Allow the player to choose from different themes for the cards (e.g., animals, space, plants).
+REQ31 Additional feature requirements: Themes and customization: Themes can change the background of the game board and the card designs.
+REQ32 Additional feature requirements: Score and timing: Include a timer to track how long it takes for the player to complete the game.
+REQ33 Additional feature requirements: Score and timing: Score the player based on the number of attempts made and the time taken to complete the game.
+REQ34 Additional feature requirements: Score and timing: Implement a high score feature that saves the player's best scores.
+REQ35 Additional feature requirements: Settings and controls: Options to restart the game, change difficulty levels, and switch themes without restarting the application.
+REQ36 Additional feature requirements: Settings and controls: Include sound effects for flipping cards, finding a match, and winning the game, with an option to mute the sounds.
+REQ37 Additional feature requirements: Development considerations: Implement data persistence for high scores and settings (local storage or a simple file-based approach).
+REQ38 Additional feature requirements: Bonus features: Multiplayer mode where two players take turns to find matches.
+REQ39 Additional feature requirements: Bonus features: Add animations for flipping cards and winning the game.
+REQ40 Additional feature requirements: Bonus features: Implement leaderboards for high scores among different players.
+REQ41 Accessibility requirements: Keyboard navigation: Full functionality should be accessible via keyboard shortcuts to ensure that users who cannot use a mouse can navigate efficiently through the application.
+REQ42 Accessibility requirements: Keyboard navigation: Implement tab navigation through all interactive elements in a logical order.
+REQ43 Accessibility requirements: Keyboard navigation: Provide visual indicators for the currently focused element.
+REQ44 Accessibility requirements: Screen reader support: make use of alt text to describe images, icons, and other non-textual elements.
+REQ45 Accessibility requirements: Screen reader support: Use labels and roles for complex elements (like drag-and-drop interfaces or custom controls) to ensure their purpose and state are conveyed to screen reader users.
+REQ46 Accessibility requirements: High contrast mode: Support for high contrast themes that make text, icons, and other elements more distinguishable for users with low vision.
+REQ47 Accessibility requirements: High contrast mode: Ensure that all text is readable and all interactive elements are visible against background colors.
+REQ48 Accessibility requirements: Text size and font adjustments: Allow users to adjust text size without breaking the layout or losing functionality.
+REQ49 Accessibility requirements: Text size and font adjustments: Support the use of user-defined system fonts, including those designed for dyslexia.
+REQ50 Accessibility requirements: Color blind mode: Implement color schemes that are accessible to users with various types of color blindness (e.g., deuteranopia, protanopia, tritanopia).
+REQ51 Accessibility requirements: Color blind mode: Ensure that information conveyed with color is also distinguishable through patterns or shapes.
+REQ52 Accessibility requirements: Magnification and zoom: Ensure the application's interface and content can be magnified or zoomed in up to 200% without loss of content or functionality, to accommodate users with low vision.
+REQ53 Accessibility requirements: Feedback and error handling: Provide clear, understandable feedback for actions (e.g., file moved, deleted, cannot be opened).
+REQ54 Accessibility requirements: Feedback and error handling: Ensure error messages are descriptive and offer guidance on how to resolve issues, accessible via both text and screen readers.
+
+Config:
+ChatEnvConfig.with_memory: False
+ChatEnvConfig.clear_structure: True
+ChatEnvConfig.git_management: False
+ChatEnvConfig.gui_design: True
+ChatEnvConfig.incremental_develop: False
+ChatEnvConfig.background_prompt: ChatDev is a software company powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief technology officer, etc, with a multi-agent organizational structure and the mission of 'changing the digital world through programming'.
+
+
+Roster:
+Chief Executive Officer, Counselor, Chief Human Resource Officer, Chief Product Officer, Chief Technology Officer, Programmer, Code Reviewer, Software Test Engineer, Chief Creative Officer
+
+Modality:
+desktop application
+
+Ideas:
+
+
+Language:
+ Python
+
+Code_Version:
+7.0
+
+Proposed_images:
+0
+
+Incorporated_images:
+0
+
