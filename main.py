@@ -91,7 +91,11 @@ class CodeGeneratorUI:
 
     def run_code_generator(self, model_types, project_files):
         print("run_code_generator", model_types, project_files)
-        print("dry run", self.dry_run.get())
+        dry_run = self.dry_run.get()
+        one_shot = self.one_shot.get()
+        print("dry run", dry_run)
+        print("one shot", one_shot)
+
         for model_type in model_types:
             for project_file in project_files:
                 if not self.running:
@@ -99,7 +103,7 @@ class CodeGeneratorUI:
 
                 project_name, project_overview, requirements = parse_project_file(os.path.join("Requirements", project_file))
                 save_dir_name = f"{project_name}_{model_type}"
-                if self.one_shot:
+                if one_shot:
                     save_dir_name = f"{save_dir_name}_one_shot"
                 save_dir = os.path.join("Results", save_dir_name)
                 os.makedirs(save_dir, exist_ok=True)
@@ -111,9 +115,9 @@ class CodeGeneratorUI:
                         progress = json.load(f)
                 else:
                     start_index = 1
-                    if self.one_shot:
+                    if one_shot:
                         start_index = len(requirements)
-                    progress = {"current_req": start_index, "previous_version_dir": "", "info": {}, "one_shot": self.one_shot}
+                    progress = {"current_req": start_index, "previous_version_dir": "", "info": {}, "one_shot": one_shot}
 
                 previous_version_dir = progress.get("previous_version_dir", "")
 
@@ -124,7 +128,7 @@ class CodeGeneratorUI:
                     # Create the prompt for the AI
                     task_prompt = project_overview + '\n' + '\n'.join(requirements[:i])
                     # Run ChatDev, use default on first run incremental on following runs
-                    previous_version_dir, info = run_chat_dev(args, project_name, task_prompt, model_type, previous_version_dir, incremental=((not self.one_shot) and i != 1), dry_run=self.dry_run.get())
+                    previous_version_dir, info = run_chat_dev(args, project_name, task_prompt, model_type, previous_version_dir, incremental=((not one_shot) and i != 1), dry_run=dry_run)
 
                     print(previous_version_dir, info.str)
 
@@ -133,8 +137,6 @@ class CodeGeneratorUI:
                         shutil.rmtree(os.path.join(previous_version_dir, "base"))
 
                     copy_dir = os.path.join(save_dir, f"{save_dir_name}_req{i}")
-                    if self.one_shot:
-                        copy_dir = os.path.join(save_dir, f"{save_dir_name}")
 
 
                     # remove previous copy of a conflict exists
