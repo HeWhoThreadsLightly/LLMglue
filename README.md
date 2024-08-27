@@ -7,6 +7,10 @@ The module user interface and LLM API call is replaced with glue logic code to c
 ![Multiple modules conected with glue lodgic](Assets/GlueComponent.drawio.svg)
 Illustration of glue logic with the modified ToT expanded to show the replaced UI and LLM API.
 
+##
+Project ran out of time trying to integrate ToT and MemGpt into ChatDev, all of the code basses need integration testing to ensure behavior does not change during integration.
+Testing had to be stopped due to funding constraints after testing gpt3.5-turbo-16k on all projects, gpt3.5-turbo-16k was tested in a one shot configuration wit all requirements to create some data to compare the gathered data to.
+
 ## Instalation instructions
   1. Clone this repository `git clone --recurse-submodules https://github.com/HeWhoThreadsLightly/LLMglue.git`
   2. Open the downloaded repository `cd LLMglue`
