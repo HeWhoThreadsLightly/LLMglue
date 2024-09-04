@@ -1,0 +1,2 @@
+Request,code_lines,cost,duration,env_lines,manual_lines,model_type,num_code_files,num_completion_tokens,num_doc_files,num_png_files,num_prompt_tokens,num_reflection,num_total_tokens,num_utterance,version_updates
+req34,245,0.259311,1082.0,4,161,gpt-3.5-turbo,7,61965,15,0,90254,1,152219,40,13.0
